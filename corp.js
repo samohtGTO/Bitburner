@@ -134,7 +134,7 @@ async function trickInvest(ns, division, productCity = "Sector-12") {
 
 	for (const city of cities) {
 		// put all employees into production to produce as fast as possible 
-		const employees = ns.corporation.getOffice(division.name, city).employees.length;
+		const employees = ns.corporation.getOffice(division.name, city).employees;
 
 		await ns.corporation.setAutoJobAssignment(division.name, city, "Engineer", 0);
 		await ns.corporation.setAutoJobAssignment(division.name, city, "Management", 0);
